@@ -86,7 +86,7 @@ if __name__=="__main__":
         except:
             logger.info('sock.accept(): ' + 'Exception')
         else:
-            request = conn.recv(1024).decode('utf8').split(' ')
+            request = conn.recv(1024).decode('gbk').split(' ')
             if len(request)>1:
                 method = request[0]
                 src = request[1]
